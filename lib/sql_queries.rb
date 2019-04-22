@@ -23,7 +23,7 @@ def selects_most_prominent_color_and_returns_with_count
 end
 
 def counts_number_of_bears_with_goofy_temperaments
-  "SELECT bears.temperaments, COUNT(bears.color) FROM bears GROUP BY bears.color ORDER BY COUNT(*) DESC LIMIT 1;"
+  "SELECT bears.temperaments, COUNT(bears.temperaments) FROM bears WHERE temperaments = 'goody';"
 end
 
 def selects_bear_that_killed_Tim
